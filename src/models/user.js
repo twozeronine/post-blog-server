@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
+// hash 값으로 변환해주는 라이브러리
 import bcrypt from 'bcrypt';
 
 const UserSchema = new Schema({
@@ -6,6 +7,7 @@ const UserSchema = new Schema({
   hashedPassword: String,
 });
 
+// 모델 메서드
 UserSchema.methods.setPassword = async function (password) {
   const hash = await bcrypt.hash(password, 10);
   this.hashedPassword = hash;
@@ -16,6 +18,7 @@ UserSchema.methods.checkPassword = async function (password) {
   return result; //true / false
 };
 
+// 스태틱 메서드
 UserSchema.statics.findByUsername = function (username) {
   return this.findOne({ username });
 };
