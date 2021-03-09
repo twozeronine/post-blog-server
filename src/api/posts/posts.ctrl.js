@@ -1,4 +1,18 @@
 import Post from '../../models/post';
+import mongoose from 'mongoose';
+
+const { ObjectId } = mongoose.Types;
+
+// 클라이언트에서 요청한 id를 검사하는 함수
+// id를 ObjectId로 변환하여 비교해서 검사해준다.
+export const checkObjectId = (ctx, next) => {
+  const { id } = ctx.params;
+  if (!ObjectId.isValid(id)) {
+    ctx.status = 400; // Bad Request
+    return;
+  }
+  return next();
+};
 
 /* 
   POST /api/posts
