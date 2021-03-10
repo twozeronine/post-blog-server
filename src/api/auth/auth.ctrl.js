@@ -110,7 +110,7 @@ export const check = async (ctx) => {
 };
 
 /*
- POST /api/auth/logout
+  POST /api/auth/logout
 */
 
 // 로그아웃
