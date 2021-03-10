@@ -38,7 +38,7 @@ yarn start:dev
 - GET /api/posts?username=&tag=&page=
 
 > page마다 최대 포스트 : 10  
-> 'Last-page' 정보는 Request Headers에 있음.
+> 'Last-page' 정보는 Request Headers에 있음.  
 > username과 tag로 해당 페이지 찾아올수있음.
 
 ### 해당 id값의 포스트 삭제하기
