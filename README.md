@@ -6,8 +6,6 @@
 
 > 환경변수 파일 .env는 올리지않았습니다.
 
----
-
 로컬 환경에서 실행
 yarn start:dev
 
@@ -15,7 +13,9 @@ yarn start:dev
 
 ## posts API
 
-포스트 등록하기
+### 포스트 등록하기
+
+- POST /api/posts
 
 ```json
 {
@@ -25,31 +25,35 @@ yarn start:dev
 }
 ```
 
-POST /api/posts
+### 포스트 전부다 가져오기
 
-포스트 전부다 갖고오기  
-GET /api/posts/
+- GET /api/posts/
 
-해당 id값의 포스트 가져오기  
-GET /api/posts/:id
+### 해당 id값의 포스트 가져오기
 
-해당 페이지의 포스트 가져오기  
-GET /posts?page={Index}
+- GET /api/posts/:id
 
-( page마다 최대 포스트 : 10 )  
-'Last-page'는 Request Headers에 있음.
+### 해당 페이지의 포스트 가져오기
 
-해당 id값의 포스트 삭제하기  
-DELETE /api/posts/:id
+- GET /api/posts?username=&tag=&page=
 
-해당 id값의 포스트 수정하기  
-PATCH /api/posts/:id
+> page마다 최대 포스트 : 10  
+> 'Last-page' 정보는 Request Headers에 있음.
+> username과 tag로 해당 페이지 찾아올수있음.
+
+### 해당 id값의 포스트 삭제하기
+
+- DELETE /api/posts/:id
+
+### 해당 id값의 포스트 수정하기
+
+- PATCH /api/posts/:id
 
 ```json
 {
   "title": "수정",
   "body": "수정 내용",
-  "tags": ["수정", "태그"]
+  "tags": ["수정태그1", "수정태그2"]
 }
 ```
 
@@ -57,8 +61,9 @@ PATCH /api/posts/:id
 
 ## user API
 
-회원가입  
-POST /api/auth/register
+### 회원가입
+
+- POST /api/auth/register
 
 ```json
 {
@@ -67,8 +72,9 @@ POST /api/auth/register
 }
 ```
 
-로그인  
-POST /api/auth/login
+### 로그인
+
+- POST /api/auth/login
 
 ```json
 {
@@ -77,11 +83,13 @@ POST /api/auth/login
 }
 ```
 
-로그인 상태 확인하기  
-GET /api/auth/check
+### 로그인 상태 확인하기
 
-로그아웃  
-POST /api/auth/logout
+- GET /api/auth/check
+
+### 로그아웃
+
+- POST /api/auth/logout
 
 ## Environments
 
