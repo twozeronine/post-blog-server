@@ -25,6 +25,8 @@ UserSchema.methods.serialize = function () {
 };
 
 // 스태틱 메서드
+// 찾지못하면 null return
+// 찾으면 객체 리턴
 UserSchema.statics.findByUsername = function (username) {
   return this.findOne({ username });
 };
