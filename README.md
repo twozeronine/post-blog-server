@@ -4,6 +4,12 @@ yarn start:dev
 ## posts API
 
 포스트 등록하기
+{
+"title": "제목",
+"body": "내용",
+"tags": ["태그1","태그2"]
+}
+
 POST /api/posts
 
 포스트 전부다 갖고오기
@@ -26,7 +32,7 @@ PATCH /api/posts/:id
 {
 "title": "수정",
 "body": "수정 내용",
-"tags": ['수정','태그']
+"tags": ["수정","태그"]
 }
 
 ## user API
@@ -34,15 +40,15 @@ PATCH /api/posts/:id
 회원가입
 POST /api/auth/register
 {
-"username": "young",
-"password": "mypass123"
+"username": "username",
+"password": "password"
 }
 
 로그인
 POST /api/auth/login
 
 {
-"username": "young",
+"username": "username",
 "password": "mypass123"
 }
 
