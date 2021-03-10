@@ -109,5 +109,9 @@ export const check = async (ctx) => {
   ctx.body = user;
 };
 
+/*
+ POST /api/auth/logout
+*/
+
 // 로그아웃
 export const logout = async (ctx) => {};
