@@ -1,3 +1,4 @@
+// dotenv 미리 작성해놓은 .env 파일을 환경변수에 대신 설정해주는 기능
 require('dotenv').config();
 import Koa from 'koa';
 import Router from 'koa-router';
