@@ -18,6 +18,7 @@ yarn start:dev
 - POST /api/posts
 
 ```json
+/* Request body */
 {
   "title": "제목",
   "body": "내용",
@@ -50,6 +51,7 @@ yarn start:dev
 - PATCH /api/posts/:id
 
 ```json
+/* Request body */
 {
   "title": "수정",
   "body": "수정 내용",
@@ -66,6 +68,7 @@ yarn start:dev
 - POST /api/auth/register
 
 ```json
+/* Request body */
 {
   "username": "username",
   "password": "password"
@@ -77,6 +80,7 @@ yarn start:dev
 - POST /api/auth/login
 
 ```json
+/* Request body */
 {
   "username": "username",
   "password": "password"
