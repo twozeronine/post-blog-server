@@ -13,6 +13,8 @@ mongoDB를 사용하여 서버와 데이터베이스를 연결하였습니다.
 ※ 3 / 30 추가내용  
 koa-static을 사용하여 nginx 서버를 따로 구현하지않고 API서버와 통합하여 정적인 페이지를 제공하게 하였습니다.
 
+> [Young-blog](https://blog-axhvl5dnbq-an.a.run.app/) 배포된 사이트 주소입니다.
+
 > 환경변수 파일 .env는 올리지않았습니다.
 
 로컬 환경에서 실행
