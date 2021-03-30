@@ -1,6 +1,6 @@
 # post-blog-server
 
-간단한 포스트를 작성 , 수정, 삭제 등 할 수 있는 블로그 웹 앱의 server입니다.
+간단한 포스트를 작성 , 읽기 , 수정, 삭제 등 할 수 있는 CRUD 블로그 웹 앱의 server입니다.
 
 Node.js의 koa 프레임워크를 사용하여 REST API를 구현하였습니다.
 
@@ -13,7 +13,7 @@ mongoDB를 사용하여 서버와 데이터베이스를 연결하였습니다.
 ※ 3 / 30 추가내용  
 koa-static을 사용하여 nginx 서버를 따로 구현하지않고 API서버와 통합하여 정적인 페이지를 제공하게 하였습니다.
 
-> [Young-blog](https://blog-axhvl5dnbq-an.a.run.app/) 배포된 사이트 주소입니다.
+> [Young-blog](https://blog-axhvl5dnbq-an.a.run.app/) 배포된 사이트입니다.
 
 > 환경변수 파일 .env는 올리지않았습니다.
 
@@ -110,9 +110,12 @@ yarn start:dev
 
 - koa@2.13.1
 - koa-router@10.0.0
+- koa-static@5.0.0
+- koa-bodyparser@4.3.0
 - bcrypt@5.0.1
 - dotenv@8.2.0
 - esm@3.2.25
 - joi@17.4.0
 - jsonwebtoken@8.5.1
 - mongoose@5.11.19
+- sanitize-html@2.3.3
